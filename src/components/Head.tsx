@@ -12,10 +12,13 @@ export const Head: React.FC<HeadProps> = ({}) => {
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Merriweather:wght@300;400;700;900&display=swap"
         rel="stylesheet"
       ></link>
-      <script>
+      <script id="mcjs" type="text/javascript">
         {`
-          id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f4a0aff6b728cb2ee606c5453/ff52cfa324d5baa976d75aa10.js");
-      `}
+          !function(c,h,i,m,p) {
+            m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)
+          }
+          (document,"script","https://chimpstatic.com/mcjs-connected/js/users/f4a0aff6b728cb2ee606c5453/ff52cfa324d5baa976d75aa10.js");
+        `}
       </script>
     </Helmet>
   );
