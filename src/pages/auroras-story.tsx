@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout";
 
 const PageStyles = styled.section``;
 
-const NotFound = () => {
+const AurorasStory = () => {
   return (
     <Layout>
       <PageStyles></PageStyles>
@@ -12,4 +12,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default AurorasStory;

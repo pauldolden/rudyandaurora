@@ -3,11 +3,12 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderStyles = styled.header`
-  padding: 5rem 10%;
+  padding: 5rem 5%;
   font-family: var(--header-font);
   display: flex;
   justify-content: space-between;
   background-color: var(--black-base);
+  border-bottom: 5px solid var(--peach-base);
 
   .logo {
     font-family: var(--logo-font);
@@ -45,10 +46,11 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <HeaderStyles>
       <Link to="/" className="logo">
-        Remembering Rudy & Aurora
+        Remembering Rudy & Aurora Dolden
       </Link>
       <nav>
         <Link to="/">Home</Link>
+        <Link to="/our-story">Our Story</Link>
         <Link to="/rudys-story">Rudy's Story</Link>
         <Link to="/auroras-story">Aurora's Story</Link>
         <Link to="/contact">Contact</Link>

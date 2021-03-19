@@ -1,8 +1,8 @@
 {
-  "name": "dolden-dev",
+  "name": "rudy-and-aurora",
   "version": "1.0.0",
   "private": true,
-  "description": "dolden-dev",
+  "description": "Rudy & Aurora",
   "author": "Paul Dolden",
   "keywords": [
     "gatsby"
@@ -12,17 +12,16 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "preload-fonts": "gatsby-preload-fonts"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^2.32.8",
-    "gatsby-plugin-preload-fonts": "^1.9.1",
+    "emailjs": "^3.4.0",
+    "gatsby": "^3.1.1",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-styled-components": "^3.10.0",
+    "gatsby-source-instagram": "^0.9.0",
     "gatsby-source-prismic": "^3.3.4",
-    "prismic-reactjs": "^1.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",

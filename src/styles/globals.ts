@@ -6,14 +6,15 @@ export default createGlobalStyle`
         // Font Families
         --header-font: "Cormorant Garamond", serif;
         --logo-font: "Great Vibes", serif;
+        --body-font: "Merriweather", sans-serif;
         // Font Sizes
         --size-base: 1rem;
         --size-content-s: 1.4rem;
         --size-content: 1.6rem;
         --size-nav: 2.2rem;
         --size-subtitle: 2.6rem;
-        --size-title: 3rem;
-        --size-logo: 3.6rem;
+        --size-title: 3.6rem;
+        --size-logo: 5rem;
         // Colours
         --peach-base: #FFCC99;
         --lilac-base: #CC99FF;
@@ -36,6 +37,8 @@ export default createGlobalStyle`
 
     body {
         font-size: var(--size-content);
+        color: var(--black-base);
         background-color: var(--white-base);
+        font-family: var(--body-font);
     }
 `;
