@@ -36,7 +36,7 @@ module.exports = {
         setup(ref) {
           const metaInfo = ref.query.site.siteMetadata;
 
-          metaInfo.generator = "GatsbyJS test";
+          metaInfo.generator = "GatsbyJS RSS";
           return metaInfo;
         },
         query: `
@@ -56,7 +56,7 @@ module.exports = {
             serialize(value) {
               const rssMetadata = value.query.site.siteMetadata;
               return value.query.allPrismicPost.edges.map((edge) => ({
-                title: edge.node.title.text,
+                title: edge.node.data.title.text,
                 description: edge.node.data.short_content.text,
                 date: edge.node.first_publication_date,
                 url: rssMetadata.siteUrl + "/post/" + edge.node.uid,
