@@ -20,6 +20,19 @@ export const Head: React.FC<HeadProps> = ({}) => {
           (document,"script","https://chimpstatic.com/mcjs-connected/js/users/f4a0aff6b728cb2ee606c5453/ff52cfa324d5baa976d75aa10.js");
         `}
       </script>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XX4SVQ653M"
+      ></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-XX4SVQ653M');
+          `}
+      </script>
     </Helmet>
   );
 };

@@ -16,7 +16,11 @@ export default createGlobalStyle`
         --size-title: 4.5rem;
         --size-logo: 5rem;
         // Colours
+        --peach-light: #FFFFCC;
+        --peach-med-light: #FFE6B3;
         --peach-base: #FFCC99;
+        --peach-med-dark: #E6B380;
+        --peach-dark: #CC9966;
         --lilac-base: #CC99FF;
         --teal-base: #99FFCC;
         --white-base: #FFF7ED;
@@ -37,8 +41,8 @@ export default createGlobalStyle`
 
     body {
         font-size: var(--size-content);
-        color: var(--peach-base);
-        background-color: var(--black-base);
+        color: var(--black-base);
+        background-color: var(--white-base);
         font-family: var(--body-font);
     }
 
@@ -57,5 +61,6 @@ export default createGlobalStyle`
 
     .content p {
         padding-bottom: 1rem;
+        line-height: 1.8;
     }
 `;

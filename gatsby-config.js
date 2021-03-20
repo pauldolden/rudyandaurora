@@ -60,7 +60,7 @@ module.exports = {
                 description: edge.node.data.short_content.text,
                 date: edge.node.first_publication_date,
                 url: rssMetadata.siteUrl + "/post/" + edge.node.uid,
-                guid: rssMetadata.siteUrl + edge.node.uid,
+                guid: rssMetadata.siteUrl + "/post/" + edge.node.uid,
                 content: edge.node.data.content.html,
               }));
             },

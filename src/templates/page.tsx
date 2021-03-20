@@ -11,6 +11,7 @@ const PageStyles = styled.section`
   h1 {
     font-size: var(--size-title);
     font-family: var(--logo-font);
+    color: var(--peach-med-dark);
     padding-bottom: 3rem;
     text-align: center;
   }
@@ -29,7 +30,7 @@ const PageStyles = styled.section`
   .content-block {
     display: flex;
     flex-wrap: wrap;
-    color: var(--white-base);
+    color: var(--black-base);
     * {
       width: 100%;
     }

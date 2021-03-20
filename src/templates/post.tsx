@@ -8,12 +8,16 @@ const PageStyles = styled.section`
   flex: 1;
 
   h1 {
+    color: var(--peach-med-dark);
     font-size: var(--size-title);
-    padding-bottom: 1rem;
+    font-family: var(--logo-font);
+    padding-bottom: 3rem;
+    text-align: center;
   }
   h4 {
     font-size: var(--size-content-s);
     padding-bottom: 2rem;
+    text-align: center;
   }
 
   div {

@@ -7,11 +7,10 @@ const PageStyles = styled.aside`
   display: flex;
   flex-direction: column;
   width: 15%;
-  height: 100%;
   align-items: center;
   flex-wrap: wrap;
-  color: var(--peach-base);
-  background-color: var(--black-base);
+  color: var(--black-base);
+  background-color: var(--peach-base);
   text-align: center;
 
   div {
@@ -32,7 +31,7 @@ const PageStyles = styled.aside`
 
   a {
     color: inherit;
-    font-size: var(--size-nav);
+    font-size: var(--size-content);
     padding: 1rem 3rem;
     width: 100%;
     font-family: var(--nav-font);

@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import styled from "styled-components";
 import GlobalStyles from "../styles/globals";
 import PostsSidebar from "./PostsSidebar";
+import { Footer } from "./Footer";
 
 const LayoutStyles = styled.section`
   display: flex;
@@ -12,7 +13,7 @@ const LayoutStyles = styled.section`
   main {
     display: flex;
     flex: 1;
-    border-left: 5px solid var(--peach-base);
+    border-left: 1px solid var(--peach-med-dark);
   }
 `;
 
@@ -30,6 +31,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <PostsSidebar />
         <main>{children}</main>
       </LayoutStyles>
+      <Footer />
     </>
   );
 };

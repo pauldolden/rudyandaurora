@@ -8,21 +8,23 @@ const HeaderStyles = styled.header`
   font-family: var(--header-font);
   display: flex;
   justify-content: space-between;
-  background-color: var(--black-base);
-  border-bottom: 5px solid var(--peach-base);
+  background-color: var(--peach-base);
+  border-bottom: 1px solid var(--peach-med-dark);
+
   .logo {
     font-family: var(--logo-font);
     font-size: var(--size-logo);
-    color: var(--peach-base);
+    color: var(--black-base);
   }
 
   nav {
     display: flex;
+    align-items: center;
 
     a {
       padding: 1rem;
       font-size: var(--size-nav);
-      color: var(--peach-base);
+      color: var(--black-base);
       font-weight: 600;
       transition: all 0.3s;
 
@@ -34,7 +36,7 @@ const HeaderStyles = styled.header`
       }
 
       &:hover {
-        color: var(--lilac-base);
+        color: var(--peach-dark);
       }
     }
   }
