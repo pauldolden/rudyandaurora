@@ -22,6 +22,14 @@
         "placeholder": "Publish Date"
       }
     },
+    "short_content": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Short Content",
+        "placeholder": "Short Post Snippet"
+      }
+    },
     "content": {
       "type": "StructuredText",
       "config": {
