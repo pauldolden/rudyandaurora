@@ -33,59 +33,67 @@ module.exports = {
     {
       resolve: "gatsby-plugin-feed",
       options: {
-        query: `{
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
+        setup(ref) {
+          const metaInfo = ref.query.site.siteMetadata;
+
+          metaInfo.generator = "GatsbyJS test";
+          return metaInfo;
+        },
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+              site_url: siteUrl
             }
           }
-        `,
-      },
-      feeds: [
-        {
-          serialize: ({ query: { site, allPrismicPost } }) => {
-            return allPrismicPost.edges.map((edge) => {
-              return Object.assign({}, edge.node.data, {
-                description: edge.node.data.short_content,
-                date: edge.node.first_publication_date,
-                url: site.siteMetadata.siteUrl + edge.node.uid,
-                guid: site.siteMetadata.siteUrl + edge.node.uid,
-              });
-            });
-          },
-          query: `
+        }
+  `,
+        feeds: [
           {
-            allPrismicPost {
-              edges {
-                node {
-                  id
-                  uid
-                  data {
-                    short_content {
-                      text
+            serialize(value) {
+              const rssMetadata = value.query.site.siteMetadata;
+              return value.query.allPrismicPost.edges.map((edge) => ({
+                title: edge.node.title.text,
+                description: edge.node.data.short_content.text,
+                date: edge.node.first_publication_date,
+                url: rssMetadata.siteUrl + "/post/" + edge.node.uid,
+                guid: rssMetadata.siteUrl + edge.node.uid,
+                content: edge.node.data.content.html,
+              }));
+            },
+            query: `
+            {
+              allPrismicPost {
+                edges {
+                  node {
+                    id
+                    uid
+                    data {
+                      short_content {
+                        text
+                      }
+                      content {
+                        html
+                      }
+                      title {
+                        text
+                      }
                     }
-                    content {
-                      html
-                    }
-                    title {
-                      text
-                    }
+                    first_publication_date
                   }
-                  first_publication_date(fromNow: true)
                 }
               }
             }
-          }
-          
+            
           `,
-          output: "/feed.xml",
-          title: "RSS feed",
-        },
-      ],
+            output: "/feed.xml",
+            title: "Rudy and Aurora RSS Feed",
+          },
+        ],
+      },
     },
   ],
 };
