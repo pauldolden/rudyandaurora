@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout";
 import styled from "styled-components";
 
 const PageStyles = styled.section`
-  padding: 5rem 15%;
+  padding: 5rem 5%;
   flex: 1;
 
   h1 {
@@ -39,7 +39,7 @@ const Post = ({ data: { prismicPost } }: any) => {
 };
 export default Post;
 
-export const pageQuery = graphql`
+export const postQuery = graphql`
   query PostBySlug($uid: String!) {
     prismicPost(uid: { eq: $uid }) {
       uid

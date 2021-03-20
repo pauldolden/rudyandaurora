@@ -1,13 +1,12 @@
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import * as React from "react";
 import styled from "styled-components";
-import { useFetchAllPostTitles } from "../hooks/useFetchAllPostTitles";
+import { useFetchAllPostTitles } from "../graphql/useFetchAllPostTitles";
 
 const PageStyles = styled.aside`
   display: flex;
   flex-direction: column;
   width: 15%;
-  border-right: 1px solid var(--peach-base);
   height: 100%;
   align-items: center;
   flex-wrap: wrap;
@@ -45,7 +44,7 @@ const PostsSidebar = () => {
   const edges = posts.allPrismicPost.edges;
   const links = edges.map((edge: any) => {
     return (
-      <Link key={edge.node.uid} to={`/${edge.node.uid}`}>
+      <Link key={edge.node.uid} to={`/post/${edge.node.uid}`}>
         {edge.node.data.title.text}
       </Link>
     );

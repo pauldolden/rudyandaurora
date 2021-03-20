@@ -7,11 +7,12 @@ import PostsSidebar from "./PostsSidebar";
 
 const LayoutStyles = styled.section`
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 
   main {
     display: flex;
     flex: 1;
+    border-left: 5px solid var(--peach-base);
   }
 `;
 

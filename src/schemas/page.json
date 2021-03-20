@@ -1,0 +1,59 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "uuid",
+        "placeholder": "Slug"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "title",
+        "placeholder": "Page Title"
+      }
+    },
+    "content_block": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "block_image_1": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Block Image 1"
+            }
+          },
+          "block_image_2": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "Block Image 2"
+            }
+          },
+          "block_id": {
+            "type": "Number",
+            "config": {
+              "label": "Block ID",
+              "placeholder": "ID"
+            }
+          },
+          "content_text": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "allowTargetBlank": true,
+              "label": "Block Text",
+              "placeholder": "Block Text"
+            }
+          }
+        },
+        "label": "Content Block"
+      }
+    }
+  }
+}

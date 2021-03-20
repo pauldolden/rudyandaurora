@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
+import { useFetchAllPageTitles } from "../graphql/useFetchAllPageTitles";
 
 const HeaderStyles = styled.header`
   padding: 5rem 5%;
@@ -9,7 +10,6 @@ const HeaderStyles = styled.header`
   justify-content: space-between;
   background-color: var(--black-base);
   border-bottom: 5px solid var(--peach-base);
-
   .logo {
     font-family: var(--logo-font);
     font-size: var(--size-logo);
@@ -43,6 +43,15 @@ const HeaderStyles = styled.header`
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = ({}) => {
+  const pages = useFetchAllPageTitles();
+  const edges = pages.allPrismicPage.edges;
+  const links = edges.map((edge: any) => {
+    return (
+      <Link key={edge.node.uid} to={`/${edge.node.uid}`}>
+        {edge.node.data.title.text}
+      </Link>
+    );
+  }) as Symbol[];
   return (
     <HeaderStyles>
       <Link to="/" className="logo">
@@ -50,9 +59,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       </Link>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/our-story">Our Story</Link>
-        <Link to="/rudys-story">Rudy's Story</Link>
-        <Link to="/auroras-story">Aurora's Story</Link>
+        {links}
         <Link to="/contact">Contact</Link>
       </nav>
     </HeaderStyles>
