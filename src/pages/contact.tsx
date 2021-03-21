@@ -79,9 +79,9 @@ const Contact = () => {
       <PageStyles>
         <h1>{data.page_title[0].text}</h1>
         <div className="content">{text}</div>
-        <form name="contact" method="POST" data-netlify="true">
-          <input placeholder="Name" name="name" />
-          <input placeholder="Email" name="email" />
+        <form name="Contact" method="POST" data-netlify="true">
+          <input placeholder="Name" type="text" name="name" />
+          <input placeholder="Email" type="email" name="email" />
           <textarea placeholder="Message" name="message" />
           <button type="submit">Send</button>
         </form>
