@@ -16,9 +16,10 @@ const PageStyles = styled.header`
   border-bottom: 5px solid var(--peach-dark);
 
   .follow-me {
+    z-index: 1000;
     display: flex;
     align-items: center;
-    background-color: var(--peach-dark);
+    background-color: var(--peach-base);
     color: var(--black-base);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

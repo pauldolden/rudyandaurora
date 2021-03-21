@@ -63,7 +63,7 @@ const HeaderStyles = styled.header`
   .follow-me {
     display: flex;
     align-items: center;
-    background-color: var(--peach-dark);
+    background-color: var(--peach-base);
     color: var(--black-base);
     border-bottom-left-radius: 5px;
     position: absolute;
