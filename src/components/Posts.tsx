@@ -8,6 +8,10 @@ const PageStyles = styled.section`
   padding: 5rem 2rem;
   flex: 1;
 
+  @media (max-width: 1200px) {
+    padding: 4rem 0;
+  }
+
   article {
     display: flex;
     flex-direction: column;
@@ -17,11 +21,23 @@ const PageStyles = styled.section`
 
     section {
       display: flex;
+
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        width: 100%;
+      }
     }
 
     .left {
       padding: 0 1rem;
       margin-right: 2rem;
+      max-width: 30rem;
+
+      @media (max-width: 1200px) {
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
     }
 
     .right {
