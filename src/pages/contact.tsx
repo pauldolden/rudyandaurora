@@ -79,7 +79,14 @@ const Contact = () => {
       <PageStyles>
         <h1>{data.page_title[0].text}</h1>
         <div className="content">{text}</div>
-        <form name="Contact" method="POST" data-netlify="true">
+        <form
+          name="Contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="Contact" />
+          <input type="hidden" name="bot-field" />
           <input placeholder="Name" type="text" name="name" />
           <input placeholder="Email" type="email" name="email" />
           <textarea placeholder="Message" name="message" />
