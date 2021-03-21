@@ -13,7 +13,7 @@ const PageStyles = styled.section`
   flex: 1;
 
   form {
-    margin: 2rem 0;
+    margin: 4rem 0;
     background-color: var(--peach-base);
     padding: 2rem;
     width: 90%;
@@ -79,7 +79,7 @@ const Contact = () => {
       <PageStyles>
         <h1>{data.page_title[0].text}</h1>
         <div className="content">{text}</div>
-        <form name="contact" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true">
           <input placeholder="Name" name="name" />
           <input placeholder="Email" name="email" />
           <textarea placeholder="Message" name="message" />
