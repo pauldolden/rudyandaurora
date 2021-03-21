@@ -9,6 +9,7 @@ const PageStyles = styled.header`
   display: none;
   background-color: var(--black-base);
   padding: 5rem 0;
+  padding-top: 7rem;
   align-items: center;
   position: relative;
   -webkit-tap-highlight-color: transparent;
@@ -25,7 +26,7 @@ const PageStyles = styled.header`
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     font-size: var(--size-content-s);
     svg {
       fill: var(--black-base);
@@ -128,7 +129,7 @@ const Box = styled.div`
   z-index: 150;
   user-select: none;
   position: absolute;
-  top: 50%;
+  top: calc(50% + 1rem);
   transform: translateY(-50%);
   right: 4rem;
 
