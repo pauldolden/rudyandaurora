@@ -175,7 +175,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({}) => {
   return (
     <PageStyles className={openClass}>
       <Link to="/" className="logo">
-        Remembering Rudy & Aurora Dolden
+        Remembering Rudy & Aurora
       </Link>
       <a
         href="https://instagram.com/rememberingrudydolden"

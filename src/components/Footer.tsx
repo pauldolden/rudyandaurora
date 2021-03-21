@@ -18,7 +18,7 @@ const FooterStyles = styled.footer`
     padding: 1rem 2rem;
     cursor: pointer;
     font-size: 2rem;
-    background-color: var(--peach-base);
+    background-color: var(--peach-med-dark);
     color: var(--black-base);
   }
 
@@ -58,7 +58,7 @@ const FooterStyles = styled.footer`
   }
 
   .footer-top {
-    background-color: var(--peach-dark);
+    background-color: var(--peach-base);
     display: flex;
     justify-content: center;
     padding: 2rem;

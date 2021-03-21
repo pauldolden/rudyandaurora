@@ -93,7 +93,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
   return (
     <HeaderStyles>
       <Link to="/" className="logo">
-        Remembering Rudy & Aurora Dolden
+        Remembering Rudy & Aurora
       </Link>
       <a
         href="https://instagram.com/rememberingrudydolden"
