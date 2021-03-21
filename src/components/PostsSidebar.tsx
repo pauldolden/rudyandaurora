@@ -17,11 +17,10 @@ const PageStyles = styled.aside`
 
   .links {
     max-height: 100%;
-    overflow: scroll;
+    overflow-y: auto;
 
     @media (max-width: 700px) {
       max-height: 240px;
-      overflow: scroll;
     }
   }
 

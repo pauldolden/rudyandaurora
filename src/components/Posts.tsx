@@ -61,6 +61,16 @@ const PageStyles = styled.section`
       align-items: center;
       padding: 1rem;
       padding-bottom: 3rem;
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+        width: 100%;
+
+        h3 {
+          padding: 0;
+          padding-top: 1rem;
+        }
+      }
     }
 
     a {
