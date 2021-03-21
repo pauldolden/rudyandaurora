@@ -16,7 +16,9 @@
     "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.11",
     "babel-plugin-styled-components": "^1.12.0",
+    "classnames": "^2.2.6",
     "emailjs": "^3.4.0",
     "formik": "^2.2.6",
     "gatsby": "^3.1.1",

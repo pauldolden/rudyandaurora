@@ -6,7 +6,6 @@ const FooterStyles = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: var(--black-base);
 
   h2 {
@@ -15,18 +14,15 @@ const FooterStyles = styled.footer`
   }
 
   input.button {
-    border-radius: 7px;
     font-family: var(--logo-font);
     padding: 1rem 2rem;
     cursor: pointer;
     font-size: 2rem;
-    background-color: var(--white-base);
+    background-color: var(--peach-base);
     color: var(--black-base);
-    border: 2px solid var(--black-base);
   }
 
   input {
-    border-radius: 5px;
     padding: 1rem 1rem;
     outline: none;
     border: none;
@@ -47,35 +43,63 @@ const FooterStyles = styled.footer`
   form {
     display: flex;
     align-items: center;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+
+      h2 {
+        padding: 0;
+      }
+
+      & > * {
+        margin: 0.5rem 0;
+      }
+    }
   }
 
   .footer-top {
-    background-color: var(--peach-base);
+    background-color: var(--peach-dark);
     display: flex;
     justify-content: center;
-    padding: 2rem 15%;
+    padding: 2rem;
     width: 100%;
     border-top: 1px solid var(--peach-med-dark);
   }
 
   .footer-main {
-    padding: 2rem 15%;
+    padding: 2rem 5%;
     width: 100%;
-    background-color: var(--peach-med-dark);
+    background-color: var(--black-base);
+    color: var(--peach-base);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
 
-  a {
-    color: var(--black-base);
-    font-weight: 700;
+    & > * {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+
+      & > * {
+        padding: 1rem 0;
+      }
+    }
+
+    a {
+      color: var(--peach-base);
+      font-weight: 700;
+    }
   }
 `;
 
 interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
+  const date = new Date();
   return (
     <FooterStyles>
       <section className="footer-top">
@@ -125,6 +149,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
                 type="text"
                 name="b_f4a0aff6b728cb2ee606c5453_96356e4060"
                 value=""
+                readOnly
               />
             </div>
             <div className="clear">
@@ -134,13 +159,20 @@ export const Footer: React.FC<FooterProps> = ({}) => {
                 name="subscribe"
                 id="mc-embedded-subscribe"
                 className="button"
+                readOnly
               />
             </div>
           </form>
         </div>
       </section>
       <section className="footer-main">
-        Made with 🧡 by &nbsp;<a href="https://dolden.dev">Paul Dolden</a>
+        <div>
+          &copy; {date.getFullYear()}. Nicola Dolden. All rights reserved.
+        </div>
+        <div>For our girls.</div>
+        <div>
+          Made with 🧡 by &nbsp;<a href="https://dolden.dev">Paul Dolden</a>
+        </div>
       </section>
     </FooterStyles>
   );

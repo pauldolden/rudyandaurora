@@ -31,7 +31,7 @@ export const Head: React.FC<HeadProps> = ({}) => {
           gtag('js', new Date());
         
           gtag('config', 'G-XX4SVQ653M');
-          `}
+        `}
       </script>
     </Helmet>
   );

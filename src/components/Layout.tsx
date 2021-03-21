@@ -5,10 +5,15 @@ import styled from "styled-components";
 import GlobalStyles from "../styles/globals";
 import PostsSidebar from "./PostsSidebar";
 import { Footer } from "./Footer";
+import { MobileHeader } from "./MobileHeader";
 
 const LayoutStyles = styled.section`
   display: flex;
   min-height: 100vh;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 
   main {
     display: flex;
@@ -26,6 +31,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     <>
       <Head />
       <GlobalStyles />
+      <MobileHeader />
       <Header />
       <LayoutStyles>
         <PostsSidebar />

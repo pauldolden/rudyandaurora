@@ -22,6 +22,14 @@
         "placeholder": "Publish Date"
       }
     },
+    "post_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Post Image"
+      }
+    },
     "short_content": {
       "type": "StructuredText",
       "config": {
