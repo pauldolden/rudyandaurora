@@ -8,6 +8,15 @@ const PageStyles = styled.section`
   padding: 5rem 10%;
   flex: 1;
 
+  .image-section {
+    display: flex;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      padding-bottom: 2rem;
+    }
+  }
+
   h1 {
     font-size: var(--size-title);
     font-family: var(--logo-font);
@@ -60,9 +69,7 @@ interface ContentBlock {
 
 const Page = ({ data: { prismicPage } }: any) => {
   const { data } = prismicPage;
-  console.log(data);
   const blocks = data.content_block;
-  console.log(blocks);
   const blocksDisplay = blocks.map((block: ContentBlock) => {
     return (
       <section key={block.block_id} className="content-block">
