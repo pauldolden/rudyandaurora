@@ -171,7 +171,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div>For our girls.</div>
         <div>
-          Made with 🧡 by &nbsp;<a href="https://dolden.dev">Paul Dolden</a>
+          Made with 🧡 by&nbsp;<a href="https://dolden.dev">Paul Dolden</a>
         </div>
       </section>
     </FooterStyles>
