@@ -6,8 +6,8 @@ const PageStyles = styled.section``;
 
 const NotFound = () => {
   return (
-    <Layout>
-      <PageStyles></PageStyles>
+    <Layout title="404">
+      <PageStyles>Sorry, there doesn't seem to be a page there.</PageStyles>
     </Layout>
   );
 };

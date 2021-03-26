@@ -27,7 +27,7 @@ const PageStyles = styled.section`
 
 const SuccessPage = () => {
   return (
-    <Layout>
+    <Layout title="Success">
       <PageStyles>
         <h1>Success!</h1>
         <Link to="/"> Back to the blog &raquo;</Link>

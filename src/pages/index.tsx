@@ -32,7 +32,7 @@ const IndexPage = () => {
     return <p key={para.text + Math.ceil(Math.random() * 100)}>{para.text}</p>;
   });
   return (
-    <Layout>
+    <Layout title="Home">
       <PageStyles>
         <h1>{data.page_title[0].text}</h1>
         <div className="content">{text}</div>

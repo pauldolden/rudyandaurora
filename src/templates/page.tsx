@@ -94,7 +94,7 @@ const Page = ({ data: { prismicPage } }: any) => {
     );
   });
   return (
-    <Layout>
+    <Layout title={data.title.text}>
       <PageStyles>
         <h1>{data.title.text}</h1>
         <section>{blocksDisplay}</section>

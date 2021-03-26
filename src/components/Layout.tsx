@@ -24,12 +24,13 @@ const LayoutStyles = styled.section`
 
 interface LayoutProps {
   children: React.ReactNode;
+  title: String;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   return (
     <>
-      <Head />
+      <Head title={title} />
       <GlobalStyles />
       <MobileHeader />
       <Header />

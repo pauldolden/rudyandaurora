@@ -32,7 +32,7 @@ const PageStyles = styled.section`
 const Post = ({ data: { prismicPost } }: any) => {
   const { data, first_publication_date } = prismicPost;
   return (
-    <Layout>
+    <Layout title={data.title.text}>
       <PageStyles>
         <h1>{data.title.text}</h1>
         <h4>Posted {first_publication_date}</h4>
