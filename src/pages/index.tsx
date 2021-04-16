@@ -12,6 +12,10 @@ const PageStyles = styled.section`
   padding: 5rem 10%;
   flex: 1;
 
+  .content {
+    text-align: center;
+  }
+
   @media (max-width: 700px) {
     padding: 5rem 2rem;
   }
