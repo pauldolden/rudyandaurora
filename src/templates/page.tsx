@@ -8,8 +8,16 @@ const PageStyles = styled.section`
   padding: 5rem 10%;
   flex: 1;
 
+  @media (max-width: 700px) {
+    padding: 3rem 2rem;
+  }
+
   .image-section {
     display: flex;
+
+    .img-cont img {
+      aspect-ratio: 1 / 1;
+    }
 
     @media (max-width: 1200px) {
       flex-direction: column;
