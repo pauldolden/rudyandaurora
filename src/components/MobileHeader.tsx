@@ -68,6 +68,10 @@ const PageStyles = styled.header`
     display: flex;
     align-items: center;
 
+    & > :first-child {
+      padding-right: 1rem;
+    }
+
     @media (max-width: 850px) {
       margin: 0;
       padding-left: 4rem;
@@ -79,6 +83,16 @@ const PageStyles = styled.header`
       padding-left: 4rem;
       font-size: 3rem;
       padding-right: 10rem;
+    }
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > :first-child {
+        padding-bottom: 1rem;
+      }
     }
   }
 
@@ -176,10 +190,11 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({}) => {
   return (
     <PageStyles className={openClass}>
       <Link to="/" className="logo">
-        Remembering Rudy & Aurora
+        <div>Remembering</div>
+        <div>Rudy & Aurora </div>
       </Link>
       <a
-        href="https://instagram.com/rememberingrudydolden"
+        href="https://instagram.com/rudyandaurora"
         className="follow-me"
         target="_blank"
       >

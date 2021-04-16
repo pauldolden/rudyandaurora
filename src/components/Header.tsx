@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         Remembering Rudy & Aurora
       </Link>
       <a
-        href="https://instagram.com/rememberingrudydolden"
+        href="https://instagram.com/rudyandaurora"
         className="follow-me"
         target="_blank"
       >
