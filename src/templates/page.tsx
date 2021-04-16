@@ -98,13 +98,14 @@ interface ContentBlock {
 const Page = ({ data: { prismicPage } }: any) => {
   const { data } = prismicPage;
   const blocks = data.content_block;
+  console.log(blocks);
   const blocksDisplay = blocks.map((block: ContentBlock) => {
     return (
       <section key={block.block_id} className="content-block">
         {block.content_text.html && (
           <div className="content">{parse(block.content_text.html)}</div>
         )}
-        {(block.block_image_1 || block.block_image_2) && (
+        {(block.block_image_1?.url || block.block_image_2?.url) && (
           <div className="image-section">
             {block.block_image_1 && (
               <div className="img-cont">
