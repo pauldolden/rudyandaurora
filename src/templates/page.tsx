@@ -15,6 +15,18 @@ const PageStyles = styled.section`
   .image-section {
     display: flex;
 
+    .img-cont {
+      padding: 0 2rem;
+    }
+
+    .img-cont:first-child {
+      padding-left: 0;
+    }
+
+    .img-cont:last-child {
+      padding-right: 0;
+    }
+
     .img-cont img {
       aspect-ratio: 1 / 1;
     }
@@ -22,6 +34,14 @@ const PageStyles = styled.section`
     @media (max-width: 1200px) {
       flex-direction: column;
       padding-bottom: 2rem;
+
+      .img-cont {
+        padding: 0;
+      }
+
+      .img-cont:first-child {
+        padding-bottom: 2rem;
+      }
     }
   }
 
