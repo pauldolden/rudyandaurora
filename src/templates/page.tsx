@@ -98,7 +98,6 @@ interface ContentBlock {
 const Page = ({ data: { prismicPage } }: any) => {
   const { data } = prismicPage;
   const blocks = data.content_block;
-  console.log(blocks);
   const blocksDisplay = blocks.map((block: ContentBlock) => {
     return (
       <section key={block.block_id} className="content-block">

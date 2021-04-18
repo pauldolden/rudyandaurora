@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 import { Layout } from "../components/Layout";
 import { useFetchContactPageContent } from "../graphql/useFetchContactPageContent";
-import { Formik, Form, Field } from "formik";
 
 interface Paragraph {
   text: string;
@@ -11,15 +10,17 @@ interface Paragraph {
 const PageStyles = styled.section`
   padding: 5rem 10%;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   form {
-    margin: 4rem 0;
     background-color: var(--peach-base);
     padding: 2rem;
-    width: 90%;
-    margin: 2rem auto;
     display: flex;
     flex-direction: column;
+    margin: 5rem 0;
+    width: 100%;
 
     @media (max-width: 1300px) {
       width: 100%;
