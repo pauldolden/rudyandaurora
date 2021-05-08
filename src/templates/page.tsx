@@ -37,6 +37,7 @@ const PageStyles = styled.section`
 
       .img-cont {
         padding: 0;
+        width: 100%;
       }
 
       .img-cont:first-child {
