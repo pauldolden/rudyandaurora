@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: "https://rudyandaurora.com",
   },
   plugins: [
+    "gatsby-plugin-image",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
@@ -19,6 +20,8 @@ module.exports = {
         schemas: {
           post: require("./src/schemas/post.json"),
           page: require("./src/schemas/page.json"),
+          home_page_content: require("./src/schemas/home_page_content.json"),
+          contact_page_content: require("./src/schemas/contact_page_content.json"),
         },
       },
     },

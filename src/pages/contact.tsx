@@ -72,14 +72,13 @@ const PageStyles = styled.section`
 const Contact = () => {
   const content = useFetchContactPageContent();
   const data = content.prismicContactPageContent.data;
-  const text = data.page_text.map((para: Paragraph) => {
-    return <p key={para.text + Math.ceil(Math.random() * 100)}>{para.text}</p>;
-  });
   return (
     <Layout title="Contact">
       <PageStyles>
-        <h1>{data.page_title[0].text}</h1>
-        <div className="content">{text}</div>
+        <h1>{data.page_title.text}</h1>
+        <div className="content">
+          <p>{data.page_text.text}</p>
+        </div>
         <form
           name="Contact"
           method="POST"

@@ -3,9 +3,12 @@ import { useFetchAllPosts } from "../graphql/useFetchAllPosts";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import parse from "html-react-parser";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 const PageStyles = styled.section`
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   flex: 1;
 
   @media (max-width: 1200px) {
@@ -15,7 +18,7 @@ const PageStyles = styled.section`
   article {
     display: flex;
     flex-direction: column;
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     margin-bottom: 3rem;
     border: 1px solid var(--peach-base);
 
@@ -44,7 +47,7 @@ const PageStyles = styled.section`
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: space-between;
     }
 
     .img-cont {
@@ -122,7 +125,7 @@ export const Posts: React.FC<PostsProps> = ({}) => {
       <article key={post.node.uid}>
         <div className="top">
           <Link to={`/post/${post.node.uid}`}>{post.node.data.title.text}</Link>
-          <h3>Posted: {post.node.first_publication_date}</h3>
+          <h3>Posted: {dayjs(post.node.first_publication_date).fromNow()}</h3>
         </div>
         <section>
           <div className="left">
@@ -134,7 +137,7 @@ export const Posts: React.FC<PostsProps> = ({}) => {
             </Link>
           </div>
           <div className="right">
-            <div className="content">
+            <div className="content post-content">
               {parse(post.node.data.short_content.html)}
             </div>
             <Link className="small" to={`/post/${post.node.uid}`}>
@@ -145,5 +148,10 @@ export const Posts: React.FC<PostsProps> = ({}) => {
       </article>
     );
   });
-  return <PageStyles>{postsMap}</PageStyles>;
+  return (
+    <PageStyles>
+      <h2 className="page-subtitle">Blog</h2>
+      {postsMap}
+    </PageStyles>
+  );
 };

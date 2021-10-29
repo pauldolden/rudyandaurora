@@ -18,7 +18,7 @@ export const useFetchAllPosts = () => {
                 text
               }
             }
-            first_publication_date(fromNow: true)
+            first_publication_date
           }
         }
       }

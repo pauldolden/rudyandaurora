@@ -61,6 +61,12 @@ export default createGlobalStyle`
 
     .content p {
         padding-bottom: 1rem;
-        line-height: 1.8;
+        line-height: 2;
+        text-align: left;
+    }
+
+    .page-subtitle {
+        text-align: center;
+        padding-bottom: 3rem;
     }
 `;

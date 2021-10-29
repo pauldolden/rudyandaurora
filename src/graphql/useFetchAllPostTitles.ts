@@ -6,7 +6,7 @@ export const useFetchAllPostTitles = () => {
       allPrismicPost {
         edges {
           node {
-            first_publication_date(fromNow: true)
+            first_publication_date
             uid
             data {
               title {

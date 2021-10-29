@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { useFetchAllPostTitles } from "../graphql/useFetchAllPostTitles";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 const PageStyles = styled.aside`
   display: flex;
@@ -135,7 +138,9 @@ const PostsSidebar = () => {
       return (
         <Link key={edge.node.uid} to={`/post/${edge.node.uid}`}>
           <div>{edge.node.data.title.text}</div>
-          <div className="date">{edge.node.first_publication_date}</div>
+          <div className="date">
+            {dayjs(edge.node.first_publication_date).fromNow()}
+          </div>
         </Link>
       );
     }) as Symbol[];

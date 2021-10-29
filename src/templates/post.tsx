@@ -2,6 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/Layout";
 import styled from "styled-components";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 const PageStyles = styled.section`
   padding: 5rem 5%;
@@ -35,7 +38,7 @@ const Post = ({ data: { prismicPost } }: any) => {
     <Layout title={data.title.text}>
       <PageStyles>
         <h1>{data.title.text}</h1>
-        <h4>Posted {first_publication_date}</h4>
+        <h4>Posted: {dayjs(first_publication_date).fromNow()}</h4>
         <div dangerouslySetInnerHTML={{ __html: data.content.html }} />
       </PageStyles>
     </Layout>
@@ -47,7 +50,7 @@ export const postQuery = graphql`
   query PostBySlug($uid: String!) {
     prismicPost(uid: { eq: $uid }) {
       uid
-      first_publication_date(fromNow: true)
+      first_publication_date
       data {
         title {
           text
