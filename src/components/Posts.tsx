@@ -136,14 +136,16 @@ export const Posts: React.FC<PostsProps> = ({}) => {
               />
             </Link>
           </div>
-          <div className="right">
-            <div className="content post-content">
-              {parse(post.node.data.short_content.html)}
+          {post.node.data.short_content.html && (
+            <div className="right">
+              <div className="content post-content">
+                {parse(post.node.data.short_content.html)}
+              </div>
+              <Link className="small" to={`/post/${post.node.uid}`}>
+                Read More &raquo;
+              </Link>
             </div>
-            <Link className="small" to={`/post/${post.node.uid}`}>
-              Read More &raquo;
-            </Link>
-          </div>
+          )}
         </section>
       </article>
     );

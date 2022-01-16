@@ -134,7 +134,7 @@ const PostsSidebar = () => {
           .includes(searchTerm.toLowerCase())
       );
     }
-    let links = searchedEdges.map((edge: any) => {
+    let links = searchedEdges.reverse().map((edge: any) => {
       return (
         <Link key={edge.node.uid} to={`/post/${edge.node.uid}`}>
           <div>{edge.node.data.title.text}</div>
