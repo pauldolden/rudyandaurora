@@ -120,7 +120,7 @@ interface PostsProps {}
 
 export const Posts: React.FC<PostsProps> = ({}) => {
   const posts = useFetchAllPosts().allPrismicPost.edges;
-  const postsMap = posts.map((post: Post) => {
+  const postsMap = posts.reverse().map((post: Post) => {
     return (
       <article key={post.node.uid}>
         <div className="top">
