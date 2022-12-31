@@ -14,9 +14,12 @@ module.exports = {
     {
       resolve: `gatsby-source-prismic`,
       options: {
-        repositoryName: `${process.env.PRISMIC_REPO}`,
-        accessToken: `${process.env.PRISMIC_TOKEN}`,
-        linkResolver: ({ node, key, value }) => (page) => `/${page.uid}`,
+        repositoryName: `${process.env.GATSBY_PRISMIC_REPO}`,
+        accessToken: `${process.env.GATSBY_PRISMIC_TOKEN}`,
+        linkResolver:
+          ({ node, key, value }) =>
+          (page) =>
+            `/${page.uid}`,
         schemas: {
           post: require("./src/schemas/post.json"),
           page: require("./src/schemas/page.json"),
